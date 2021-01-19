@@ -340,3 +340,193 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    #form-nome {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    #form-nome input[id="nome"] {
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 10px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #form-nome label[for="nome"]:nth-child(2) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #form-nome input[id="sobrenome"] {
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 10px;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        justify-self: flex-start;
+    }
+    
+    #form-nome label[for="sobrenome"] {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-left: 0;
+    }
+
+    #form-cpf {
+        grid-template-columns: 100%;
+    }
+
+    #form-rg {
+        grid-template-columns: 100%;
+    }
+
+    #form-dt-nascimento {
+        grid-template-columns: 100%;
+    }
+
+    #form-cnh {
+        grid-template-columns: 100%;
+    }
+
+    #form-estado-civil {
+        grid-template-columns: 100%;
+    }
+
+    #form-endereco {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    #form-endereco input[id="cep"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #form-endereco label[for="cep"]:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #form-endereco input[id="rua"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="rua"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    #form-endereco input[id="bairro"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="bairro"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        margin-left: 0;
+    }
+
+    #form-endereco input[id="cidade"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="cidade"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 10;
+    }
+
+    #form-endereco input[id="estado"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 10;
+        grid-row-end: 11;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="estado"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 12;
+        margin-left: 0;
+    }
+
+    #form-endereco input[id="numero"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 12;
+        grid-row-end: 13;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="numero"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 13;
+        grid-row-end: 14;
+        margin-left: 0;
+    }
+
+    #form-endereco input[id="complemento"] {
+        margin-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 14;
+        grid-row-end: 15;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form-endereco label[for="complemento"] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 15;
+        grid-row-end: 16;
+        margin-left: 0;
+    }
+    
+}
