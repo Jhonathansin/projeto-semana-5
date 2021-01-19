@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+main {
+   width: 600px;
+   margin: 10px auto 0;
+   background-color: rgba(209, 209, 209, 0.658); 
+   border-radius: 20px;
+}
+
+div#header {
+    padding: 20px;
+    border-bottom: 3px solid rgb(59, 59, 59);
+}
+
+h1 {
+    color: rgb(28, 19, 83);
+    display: inline;
+    border-bottom: 2px solid rgb(28, 19, 83);
+    cursor: default;
+}
+
+form {
+    padding: 10px;
+}
+
+form div {
+    display: grid;
+}
+
+#form-nome {
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 2;
+    width: 100%;
+}
+
+#nome {
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 98%;
+    padding-left: 10px;
+    padding-right: 2px;
+}
+
+#sobrenome {
+    outline: none;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    width: 98%;
+    justify-self: flex-end;
+    padding-left: 2px;
+    padding-right: 10px;
+}
+
+#form-nome label:nth-child(1n+2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 12px;
+}
+
+#form-nome label[for="nome"]:nth-child(1) {
+    font-size: 12px;
+}
+
+#form-nome label[for="nome"]:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#form-nome label[for="sobrenome"] {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-left: 2%;
+}
+
+#form-cpf {
+    grid-template-columns: 20% 40% 40%;
+    margin-top: 10px;
+}
+
+#form-cpf label {
+    font-size: 12px;
+}
+
+#form-cpf input {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-rg {
+    grid-template-columns: 20% 40% 40%;
+    margin-top: 10px;
+}
+
+#form-rg label {
+    font-size: 12px;
+}
+
+#form-rg input {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-dt-nascimento {
+    grid-template-columns: 40% 40% 20%;
+    margin-top: 10px;
+}
+
+#form-dt-nascimento label {
+    font-size: 12px;
+}
+
+#form-dt-nascimento input {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-cnh {
+    grid-template-columns: 40% 40% 20%;
+    margin-top: 10px;
+}
+
+#form-cnh label {
+    font-size: 12px;
+}
+
+#form-cnh select {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-estado-civil {
+    grid-template-columns: 40% 40% 20%;
+    margin-top: 10px;
+}
+
+#form-estado-civil label {
+    font-size: 12px;
+}
+
+#form-estado-civil select {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-endereco {
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: auto;
+    margin-top: 10px;
+}
+
+#form-endereco label[for="cep"]:nth-child(1) {
+    font-size: 12px;
+}
+
+#form-endereco input[id="cep"] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#form-endereco label[for="cep"]:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 12px;
+}
+
+#form-endereco input[id="rua"] {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 10px 0 0 10px;;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+    width: 98%;
+}
+
+#form-endereco label[for="rua"] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 12px;
+}
+
+#form-endereco input[id="bairro"] {
+    margin-top: 10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+    width: 98%;
+    justify-self: flex-end;
+}
+
+#form-endereco label[for="bairro"] {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 12px;
+    margin-left: 2%;
+}
+
+#form-endereco input[id="cidade"] {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    border-radius: 10px 0 0 10px;;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+    width: 98%;
+}
+
+#form-endereco label[for="cidade"] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    font-size: 12px;
+}
+
+#form-endereco input[id="estado"] {
+    margin-top: 10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+    width: 98%;
+    justify-self: flex-end;
+}
+
+#form-endereco label[for="estado"] {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    font-size: 12px;
+    margin-left: 2%;
+}
+
+#form-endereco input[id="numero"] {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+}
+
+#form-endereco label[for="numero"] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    font-size: 12px;
+}
+
+#form-endereco input[id="complemento"] {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    padding: 2px 10px;
+}
+
+#form-endereco label[for="complemento"] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 11;
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    background-color:rgb(28, 19, 83);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
