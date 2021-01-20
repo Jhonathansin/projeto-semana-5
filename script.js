@@ -229,7 +229,6 @@ function testaCamposValidos() {
 
     let textoAlerta = ""
 
-    console.log(camposInvalidos)
     if (camposInvalidos.length != 0) {
         textoAlerta += "Os seguintes campos estão faltando, por favor, os insira corretamente e tente novamente.\n\n"
 
