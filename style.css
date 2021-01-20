@@ -341,6 +341,11 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input[type="submit"]:hover {
+    background-color:rgb(62, 45, 179);
+    transition: 0.3s ease;
+}
+
 @media (max-width: 600px) {
     main {
         width: 95%;
