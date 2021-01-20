@@ -545,3 +545,11 @@ input[type="submit"]:hover {
 .campo-valido {
     border-bottom: 2px solid green !important;
 }
+
+input:read-only {
+    background-color:rgb(28, 19, 83);
+    color:white;
+    border-bottom: 1px solid green !important;
+    cursor: default;
+    transition: 0.4s ease
+}

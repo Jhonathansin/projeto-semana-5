@@ -58,7 +58,7 @@ function validaCPF() {
     const cpf = document.querySelector("#cpf")
     let valorCPF = cpf.value
     let CPFValido = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
-
+    
     if (CPFValido.test(valorCPF) == true) {
         cpf.setAttribute("class", "campo-valido")
         return true
@@ -82,6 +82,13 @@ function validaRG() {
     }
 }
 
+function veririficaReadOnly(elemento) {
+    if (elemento.readOnly == true) {
+        elemento.readOnly = false
+        elemento.value = ""
+    }
+}
+
 function validaCEP() {
     const cep = document.querySelector("#cep")
     let valorCEP = cep.value
@@ -89,8 +96,24 @@ function validaCEP() {
 
     if (CEPValido.test(valorCEP)) {
         cep.setAttribute("class", "campo-valido")
+        getDadosEnderecoCEP(valorCEP)
         return true
     } else {
+        const rua = document.querySelector("#rua")
+        const bairro = document.querySelector("#bairro")
+        const cidade = document.querySelector("#cidade")
+        const estado = document.querySelector("#estado")
+        const numero = document.querySelector("#numero")
+        const complemento = document.querySelector("#complemento")
+
+        veririficaReadOnly(rua)
+        veririficaReadOnly(bairro)
+        veririficaReadOnly(cidade)
+        veririficaReadOnly(estado)
+        veririficaReadOnly(numero)
+        veririficaReadOnly(complemento)
+
+        
         cep.setAttribute("class", "campo-invalido")
         return false
     }
@@ -222,7 +245,6 @@ function testaCamposValidos() {
         })
     }
 
-    console.log(textoAlerta != "")
     if (textoAlerta != "") {
         alert(textoAlerta)
         return false
@@ -239,3 +261,46 @@ document.querySelector("input[type='submit']").addEventListener("click", (event)
         document.querySelector("form").submit()
     }
 })
+
+function selectChangeAndBlock(id, value) {
+    const elemento = document.querySelector(`#${id}`)
+    elemento.value = value
+    elemento.readOnly = true
+}
+
+function getDadosEnderecoCEP(cep) {
+    let req = new XMLHttpRequest()
+
+    req.open("GET", `https://viacep.com.br/ws/${cep}/json/`)
+
+    req.onreadystatechange = () => {
+        if (req.readyState == 4 && req.status == 200) {
+            const obj = JSON.parse(req.responseText)
+
+            let rua = obj["logradouro"]
+            let complemento = obj["complemento"]
+            let bairro = obj["bairro"]
+            let cidade = obj["localidade"]
+            let estado = obj["uf"]
+
+            if (rua != "") {
+                selectChangeAndBlock("rua", rua)
+            }
+            if (complemento != "") {
+                selectChangeAndBlock("complemento", complemento)
+            }
+            if(bairro != "") {
+                selectChangeAndBlock("bairro", bairro)
+            }
+            if (cidade != "") [
+                selectChangeAndBlock("cidade", cidade)
+            ]
+            if (estado != "") {
+                selectChangeAndBlock("estado", estado)
+            }
+        }
+    }
+
+    req.send()
+    
+}
