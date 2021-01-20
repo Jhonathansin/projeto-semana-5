@@ -17,6 +17,7 @@ main {
    margin: 10px auto 0;
    background-color: rgba(209, 209, 209, 0.658); 
    border-radius: 20px;
+   margin-bottom: 20px;
 }
 
 div#header {
